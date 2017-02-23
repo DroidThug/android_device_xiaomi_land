@@ -30,3 +30,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.use_data_netmgrd=true \
     service.qti.ims.enabled=1 \
     telephony.lteOnCdmaDevice=1
+    telephony.lteOnCdmaDevice=1 \
+    ro.ril.fast.dormancy.rule=0 \
+    ro.ril.hsxpa=0
