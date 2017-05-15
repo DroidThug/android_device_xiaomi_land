@@ -15,46 +15,45 @@
 #
 
 DEVICE_PATH := device/xiaomi/land
-CM_PATH := vendor/cm/config/board
 
 # Define platform before including any common things
 include $(DEVICE_PATH)/PlatformConfig.mk
 
 # Inherit common ARM64 board fragments
-include $(CM_PATH)/common/arm64/architecture.mk
-include $(CM_PATH)/common/arm64/binder.mk
+include $(DEVICE_PATH)/board/common/arm64/architecture.mk
+include $(DEVICE_PATH)/board/common/arm64/binder.mk
 
 # Inherit common board fragments
-include $(CM_PATH)/common/bluetooth.mk
-include $(CM_PATH)/common/bootloader.mk
-include $(CM_PATH)/common/camera.mk
-include $(CM_PATH)/common/clang.mk
-include $(CM_PATH)/common/cpusets.mk
-include $(CM_PATH)/common/dexopt.mk
-include $(CM_PATH)/common/dlmalloc.mk
-include $(CM_PATH)/common/filesystem.mk
-include $(CM_PATH)/common/gps.mk
-include $(CM_PATH)/common/sepolicy.mk
+include $(DEVICE_PATH)/board/common/bluetooth.mk
+include $(DEVICE_PATH)/board/common/bootloader.mk
+include $(DEVICE_PATH)/board/common/camera.mk
+include $(DEVICE_PATH)/board/common/clang.mk
+include $(DEVICE_PATH)/board/common/cpusets.mk
+include $(DEVICE_PATH)/board/common/dexopt.mk
+include $(DEVICE_PATH)/board/common/dlmalloc.mk
+include $(DEVICE_PATH)/board/common/filesystem.mk
+include $(DEVICE_PATH)/board/common/gps.mk
+include $(DEVICE_PATH)/board/common/sepolicy.mk
 
 # Inherit QCOM board fragments
-include $(CM_PATH)/qcom/bluetooth.mk
-include $(CM_PATH)/qcom/bootloader.mk
-include $(CM_PATH)/qcom/camera.mk
-include $(CM_PATH)/qcom/cne.mk
-include $(CM_PATH)/qcom/display.mk
-include $(CM_PATH)/qcom/encryption.mk
-include $(CM_PATH)/qcom/fm.mk
-include $(CM_PATH)/qcom/gps.mk
-include $(CM_PATH)/qcom/per-mgr.mk
-include $(CM_PATH)/qcom/platform.mk
-include $(CM_PATH)/qcom/power.mk
-include $(CM_PATH)/qcom/recovery.mk
-include $(CM_PATH)/qcom/ril.mk
-include $(CM_PATH)/qcom/sepolicy.mk
-include $(CM_PATH)/qcom/time.mk
+include $(DEVICE_PATH)/board/qcom/bluetooth.mk
+include $(DEVICE_PATH)/board/qcom/bootloader.mk
+include $(DEVICE_PATH)/board/qcom/camera.mk
+include $(DEVICE_PATH)/board/qcom/cne.mk
+include $(DEVICE_PATH)/board/qcom/display.mk
+include $(DEVICE_PATH)/board/qcom/encryption.mk
+include $(DEVICE_PATH)/board/qcom/fm.mk
+include $(DEVICE_PATH)/board/qcom/gps.mk
+include $(DEVICE_PATH)/board/qcom/per-mgr.mk
+include $(DEVICE_PATH)/board/qcom/platform.mk
+include $(DEVICE_PATH)/board/qcom/power.mk
+include $(DEVICE_PATH)/board/qcom/recovery.mk
+include $(DEVICE_PATH)/board/qcom/ril.mk
+include $(DEVICE_PATH)/board/qcom/sepolicy.mk
+include $(DEVICE_PATH)/board/qcom/time.mk
 
 # Inherit Cyanogen board fragments
-include $(CM_PATH)/cyanogen/hardware.mk
+include $(DEVICE_PATH)/board/cyanogen/hardware.mk
 
 # Inherit device-specific board fragments
 include $(DEVICE_PATH)/board/*.mk

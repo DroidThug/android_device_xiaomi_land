@@ -15,46 +15,45 @@
 #
 
 DEVICE_PATH := $(LOCAL_PATH)
-CM_PATH := vendor/cm/config/product
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
 # Include common product fragments
-include $(CM_PATH)/common/ant.mk
-include $(CM_PATH)/common/audio.mk
-include $(CM_PATH)/common/bluetooth.mk
-include $(CM_PATH)/common/bluetooth-le.mk
-include $(CM_PATH)/common/consumerir.mk
-include $(CM_PATH)/common/fingerprint.mk
-include $(CM_PATH)/common/fm.mk
-include $(CM_PATH)/common/gello.mk
-include $(CM_PATH)/common/gps.mk
-include $(CM_PATH)/common/lights.mk
-include $(CM_PATH)/common/media.mk
-include $(CM_PATH)/common/misc.mk
-include $(CM_PATH)/common/snap.mk
-include $(CM_PATH)/common/wifi.mk
+include $(LOCAL_PATH)/product/common/ant.mk
+include $(LOCAL_PATH)/product/common/audio.mk
+include $(LOCAL_PATH)/product/common/bluetooth.mk
+include $(LOCAL_PATH)/product/common/bluetooth-le.mk
+include $(LOCAL_PATH)/product/common/consumerir.mk
+include $(LOCAL_PATH)/product/common/fingerprint.mk
+include $(LOCAL_PATH)/product/common/fm.mk
+include $(LOCAL_PATH)/product/common/gello.mk
+include $(LOCAL_PATH)/product/common/gps.mk
+include $(LOCAL_PATH)/product/common/lights.mk
+include $(LOCAL_PATH)/product/common/media.mk
+include $(LOCAL_PATH)/product/common/misc.mk
+include $(LOCAL_PATH)/product/common/snap.mk
+include $(LOCAL_PATH)/product/common/wifi.mk
 
 # Include QCOM product fragments
-include $(CM_PATH)/qcom/audio.mk
-include $(CM_PATH)/qcom/camera.mk
-include $(CM_PATH)/qcom/cne.mk
-include $(CM_PATH)/qcom/display.mk
-include $(CM_PATH)/qcom/fm.mk
-include $(CM_PATH)/qcom/gps.mk
-include $(CM_PATH)/qcom/init.mk
-include $(CM_PATH)/qcom/media.mk
-include $(CM_PATH)/qcom/net.mk
-include $(CM_PATH)/qcom/power.mk
-include $(CM_PATH)/qcom/radio.mk
-include $(CM_PATH)/qcom/sensors.mk
-include $(CM_PATH)/qcom/usb.mk
-include $(CM_PATH)/qcom/wifi.mk
+include $(LOCAL_PATH)/product/qcom/audio.mk
+include $(LOCAL_PATH)/product/qcom/camera.mk
+include $(LOCAL_PATH)/product/qcom/cne.mk
+include $(LOCAL_PATH)/product/qcom/display.mk
+include $(LOCAL_PATH)/product/qcom/fm.mk
+include $(LOCAL_PATH)/product/qcom/gps.mk
+include $(LOCAL_PATH)/product/qcom/init.mk
+include $(LOCAL_PATH)/product/qcom/media.mk
+include $(LOCAL_PATH)/product/qcom/net.mk
+include $(LOCAL_PATH)/product/qcom/power.mk
+include $(LOCAL_PATH)/product/qcom/radio.mk
+include $(LOCAL_PATH)/product/qcom/sensors.mk
+include $(LOCAL_PATH)/product/qcom/usb.mk
+include $(LOCAL_PATH)/product/qcom/wifi.mk
 
 # Include Cyanogen product fragments
-include $(CM_PATH)/cyanogen/livedisplay.mk
+include $(LOCAL_PATH)/product/cyanogen/livedisplay.mk
 
 # Include device-specific product fragments
 include $(LOCAL_PATH)/product/*.mk
